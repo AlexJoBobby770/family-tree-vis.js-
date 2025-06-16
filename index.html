@@ -4,6 +4,7 @@
   
   <title>Family Tree</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
@@ -11,13 +12,22 @@
     <div id="family-tree"></div>
     <div class="controls">
       <div class="form-group">
+      <label for="parent-name-input">Parent/Partner-Name</label>
+      <input type="text" id="parent-name-input" placeholder="Enter parent/partner's name">
       <label for="name-input">Name</label>
       <input type="text" id="name-input" placeholder="Enter name">
+      <label for="relation-select">Relation</label>
+      <select id="relation-select">
+        <option value="root">Root</option>
+        <option value="spouse">Spouse</option>
+        <option value="child">Child</option>
+      </select>
       <label for="gender-select">Gender</label>
       <select id="gender-select">
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
+      <button id="delete-btn">Delete Selected</button>
       </div>
       <button id="add-person-btn">Add Person</button>
     </div>  
